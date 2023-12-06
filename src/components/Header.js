@@ -1,19 +1,16 @@
-import React from 'react'
 import Logo from '../assets/logo.png'
+import styles from './header.module.css'
 
 const Header = () => {
   return (
-    <div className='header'>
-        <img className='logo' src={Logo} alt="Logo" />
-        <div>
-            <ul>
-                <li>Home</li>
-                <li>Vehicles</li>
-                <li>Contact us</li>
-                <li>Login</li>
-            </ul>
-        </div>
-      
+    <div className={styles.header}>
+        <img className={styles.logo} src={Logo} alt="Logo" />
+        <ul className={styles.list}>
+            <li>Home</li>
+            <li>Vehicles</li>
+            <li>Contact us</li>
+            <li>Login</li>
+        </ul>
     </div>
   )
 }

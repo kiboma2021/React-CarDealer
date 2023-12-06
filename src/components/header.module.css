@@ -1,0 +1,10 @@
+.logo{
+    border-radius: 10rem;
+}
+
+.header,
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
