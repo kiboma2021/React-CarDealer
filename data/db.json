@@ -1,0 +1,46 @@
+{
+    "vehicles": [
+        {
+            "id": 1235,
+            "name": "Toyota Camry",
+            "brand": "Toyota",
+            "year": 2018,
+            "new": true
+        },
+        {
+            "id": 1235,
+            "name": "Ford Mustang",
+            "brand": "Ford",
+            "year": 2012,
+            "new": false
+        },
+        {
+            "id": 1235,
+            "name": "Honda Civic",
+            "brand": "Honda",
+            "year": 2010,
+            "new": false
+        },
+        {
+            "id": 1235,
+            "name": "Chrysler Pacifica",
+            "brand": "Chrysler",
+            "year": 2021,
+            "new": true
+        },
+        {
+            "id": 1235,
+            "name": "Mazda CX-5",
+            "brand": "Mazda",
+            "year": 2011,
+            "new": false
+        },
+        {
+            "id": 1235,
+            "name": "Audi Q5",
+            "brand": "Audi",
+            "year": 2023,
+            "new": true
+        }
+
+]}
