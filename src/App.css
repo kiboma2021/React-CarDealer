@@ -55,6 +55,7 @@ ul> li {
 .product-price {
   font-size: 2rem;
   color: #007bff;
+  margin-bottom: 2rem;
 }
 
 /* Add a hover effect */
@@ -65,4 +66,18 @@ ul> li {
 /* Add some spacing between product cards */
 .product-card + .product-card {
   margin-left: 20px;
+}
+
+.new,
+.old {
+  margin-top: 2rem;
+  background-color: rgb(78, 115, 22);
+  padding: 1rem;
+  border-radius: 2rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.old {
+  background-color: red;
 }
