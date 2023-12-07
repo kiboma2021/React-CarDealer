@@ -1,3 +1,10 @@
+/* .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+} */
+
 ul> li {
   list-style-type: none;
   margin: 2rem;
@@ -8,4 +15,54 @@ ul> li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 5rem;
+
+}
+
+/* Style the product image */
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the product details */
+.product-details {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+/* Add a hover effect */
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some spacing between product cards */
+.product-card + .product-card {
+  margin-left: 20px;
 }
