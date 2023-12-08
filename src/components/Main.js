@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useCallback } from 'react'
 import carlogo from '../assets/car.webp'
 
 const Main = () => {
@@ -12,11 +12,17 @@ const Main = () => {
 
     const [url,setUrl] =useState("http://localhost:8000/vehicles")
 
-    useEffect(() => {
-        fetch(url)
-        .then(response => response.json())
-        .then(data => setVehicles(data))
+
+    const fetchVehicles = useCallback(async() => {
+        const response = await fetch(url);
+        const data = await response.json();
+        setVehicles(data);
+
     },[url]);
+    useEffect(() => {
+        fetchVehicles();
+
+    },[fetchVehicles]);
 
   return (
     <section style={main_style}>
