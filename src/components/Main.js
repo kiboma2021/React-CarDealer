@@ -10,21 +10,21 @@ const Main = () => {
 
     console.log(vehicles);
 
-    const url="http://localhost:8000/vehicles"
+    const [url,setUrl] =useState("http://localhost:8000/vehicles")
 
     useEffect(() => {
         fetch(url)
         .then(response => response.json())
         .then(data => setVehicles(data))
-    },[]);
+    },[url]);
 
   return (
     <section style={main_style}>
 
-        <div>
-            <button>All Vehicles</button>
-            <button>New Vehicles</button>
-            <button>Used Vehicles</button>
+        <div className='filter-btns'>
+            <button onClick={()=> setUrl("http://localhost:8000/vehicles")}>All Vehicles</button>
+            <button onClick={()=> setUrl("http://localhost:8000/vehicles?new=true")}>New Vehicles</button>
+            <button onClick={()=> setUrl("http://localhost:8000/vehicles?new=false")}>Used Vehicles</button>
         </div>
 
         {vehicles && vehicles.map((vehicle)=> (

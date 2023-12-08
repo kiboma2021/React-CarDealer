@@ -81,3 +81,19 @@ ul> li {
 .old {
   background-color: red;
 }
+
+.filter-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.filter-btns > button {
+  background-color: blueviolet;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  font-size: larger;
+}
