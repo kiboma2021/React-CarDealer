@@ -1,28 +1,27 @@
 import React, { useState,useEffect,useCallback } from 'react'
 import carlogo from '../assets/car.webp'
+import useFetch from '../hooks/useFetch'
 
 const Main = () => {
     const main_style={
         minHeight : '70vh',
     }
 
-    const [vehicles, setVehicles]=useState([]);
-
-    console.log(vehicles);
-
+    //const [vehicles, setVehicles]=useState([]);
     const [url,setUrl] =useState("http://localhost:8000/vehicles")
+    const {data:vehicles} = useFetch(url);
 
 
-    const fetchVehicles = useCallback(async() => {
-        const response = await fetch(url);
-        const data = await response.json();
-        setVehicles(data);
+    // const fetchVehicles = useCallback(async() => {
+    //     const response = await fetch(url);
+    //     const data = await response.json();
+    //     setVehicles(data);
 
-    },[url]);
-    useEffect(() => {
-        fetchVehicles();
+    // },[url]);
+    // useEffect(() => {
+    //     fetchVehicles();
 
-    },[fetchVehicles]);
+    // },[fetchVehicles]);
 
   return (
     <section style={main_style}>
