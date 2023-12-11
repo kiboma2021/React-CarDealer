@@ -1,6 +1,7 @@
 import React, { useState,useEffect,useCallback } from 'react'
 import carlogo from '../assets/car.webp'
 import useFetch from '../hooks/useFetch'
+import Loading from '../assets/loading.png'
 
 const Main = () => {
     const main_style={
@@ -9,7 +10,7 @@ const Main = () => {
 
     //const [vehicles, setVehicles]=useState([]);
     const [url,setUrl] =useState("http://localhost:8000/vehicles")
-    const {data:vehicles} = useFetch(url);
+    const {data:vehicles,loading} = useFetch(url);
 
 
     // const fetchVehicles = useCallback(async() => {
@@ -30,6 +31,10 @@ const Main = () => {
             <button onClick={()=> setUrl("http://localhost:8000/vehicles")}>All Vehicles</button>
             <button onClick={()=> setUrl("http://localhost:8000/vehicles?new=true")}>New Vehicles</button>
             <button onClick={()=> setUrl("http://localhost:8000/vehicles?new=false")}>Used Vehicles</button>
+        </div>
+
+        <div className='loading'>
+            {loading && <p><img src={Loading} alt="" /></p>}
         </div>
 
         {vehicles && vehicles.map((vehicle)=> (
