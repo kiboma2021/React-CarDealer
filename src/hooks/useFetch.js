@@ -3,23 +3,35 @@ import { useEffect, useState } from "react";
 const useFetch = (url) => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
     console.log(data)
 
     useEffect(()=> {
     const fetchVehicles = async() => {
         setLoading(true);
-        const response = await fetch(url);
-        const result = await response.json();
-        setLoading(false);
-        setData(result);
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(response.statusText)
+            }
+            const result = await response.json(); 
+            setLoading(false);
+            setData(result);            
+            
+        } catch (err){
+            setError("Error fetching from API")
+            console.log(err.message);
+        }
+
+
         //console.log(result)
     };
         fetchVehicles();
     },[url]);
 
 
-  return {data,loading}
+  return {data,loading,error}
 }
 
 export default useFetch

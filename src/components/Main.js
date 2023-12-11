@@ -10,7 +10,7 @@ const Main = () => {
 
     //const [vehicles, setVehicles]=useState([]);
     const [url,setUrl] =useState("http://localhost:8000/vehicles")
-    const {data:vehicles,loading} = useFetch(url);
+    const {data:vehicles,loading,error} = useFetch(url);
 
 
     // const fetchVehicles = useCallback(async() => {
@@ -35,6 +35,8 @@ const Main = () => {
 
         <div className='loading'>
             {loading && <p><img src={Loading} alt="" /></p>}
+            <br />
+            {error && <h2>{error}</h2>}
         </div>
 
         {vehicles && vehicles.map((vehicle)=> (
