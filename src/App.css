@@ -84,7 +84,8 @@ ul> li {
 
 .filter-btns,
 .loading,
-.nav-bar {
+.nav-bar,
+.navlinks {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,4 +99,22 @@ ul> li {
   border-radius: 1rem;
   color: white;
   font-size: larger;
+}
+
+.navlinks {
+  margin-right: 3rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.active {
+  background-color: greenyellow;
+  padding: 1rem;
+  border-radius: 2rem;
 }

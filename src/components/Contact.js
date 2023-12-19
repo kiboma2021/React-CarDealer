@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <form>
+    <form className='contact-form'>
         <input type="text" maxLength={50} placeholder='Subject' />
         <input type="text" maxLength={50} placeholder='Email' />
         <input type="text" maxLength={50} placeholder='Mobile' />
