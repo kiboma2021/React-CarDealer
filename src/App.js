@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import Careers from './components/Careers';
 
 import './App.css';
+import PageNotFound from './components/PageNotFound';
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Main />}> </Route>
         <Route path='contact' element={<Contact />}> </Route>
         <Route path='job' element={<Careers />}> </Route>
+        <Route path='*' element={<PageNotFound />}> </Route>
       </Routes>
 
       <Footer />
