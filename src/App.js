@@ -7,6 +7,9 @@ import Careers from './components/Careers';
 
 import './App.css';
 import PageNotFound from './components/PageNotFound';
+import CareersFin from './components/CareersFin';
+import CareersWeb from './components/CareersWeb';
+import CareersHr from './components/CareersHr';
 
 
 
@@ -17,7 +20,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Main />}> </Route>
         <Route path='contact' element={<Contact />}> </Route>
-        <Route path='job' element={<Careers />}> </Route>
+        <Route path='job' element={<Careers />}>
+            <Route path='finance' element={<CareersFin />}> </Route>
+            <Route path='web' element={<CareersWeb />}> </Route>
+            <Route path='hr' element={<CareersHr />}> </Route>
+        </Route>
         <Route path='*' element={<PageNotFound />}> </Route>
       </Routes>
 
